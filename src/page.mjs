@@ -55,7 +55,7 @@ ${cfg.draft ? '<div class="draft-banner" role="note"><strong>Draft for review.</
 <header class="top">
   <div class="wrap top-row">
     <span class="brand"><img src="assets/img/no-alumni-badge.webp" alt="" width="44" height="44"><span>No Alumni</span></span>
-    <nav aria-label="Proposal sections">
+    <nav class="nav-wide" aria-label="Proposal sections">
       <ul>
         <li><a href="#start">Start here</a></li>
         <li><a href="#investment">Investment</a></li>
@@ -64,6 +64,9 @@ ${cfg.draft ? '<div class="draft-banner" role="note"><strong>Draft for review.</
       </ul>
     </nav>
   </div>
+  <nav class="nav-chips" aria-label="Jump to section">
+    <a href="#start">Start here</a><a href="#investment">Pricing</a><a href="#build">Later</a><a href="#next">Future</a>
+  </nav>
 </header>
 
 <main id="main">
@@ -77,6 +80,10 @@ ${cfg.draft ? '<div class="draft-banner" role="note"><strong>Draft for review.</
       <div class="actions">
         <a class="btn btn-primary" href="#start">See the proposed engagement</a>
         <a class="btn btn-ghost" href="${mail}">Discuss the proposal</a>
+      </div>
+      <div class="glance" aria-label="Proposal at a glance">
+        <a class="glance-card" href="#start"><span class="glance-k">${v(d.sessionWindow)}</span><b>Virtual foundation</b><span>${v(d.fee)}</span></a>
+        <a class="glance-card glance-opt" href="#investment"><span class="glance-k">${v(p.when)} &middot; Optional</span><b>In-person working day</b><span>${v(p.fee)}</span></a>
       </div>
       <p class="meta">Prepared ${esc(cfg.preparedDate)}. Valid through ${v(cfg.validThrough)}.</p>
     </div>

@@ -51,7 +51,7 @@ export default {
     preparation: 'Planning and preparation included',
     deliverables: 'To be agreed together during planning',
     fee: '$7,500',
-    travel: 'included in the fee',
+    travel: 'billed at cost, once the location is set',
     venueMeals: 'included in the fee',
     decisionBy: 'To be determined together',
   },
