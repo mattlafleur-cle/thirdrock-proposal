@@ -259,7 +259,7 @@ ${cfg.draft ? '<div class="draft-banner" role="note"><strong>Draft for review.</
 
 <section class="close">
   <div class="wrap narrow center">
-    <h2>Let's talk it through</h2>
+    <h2>Let's discuss the details</h2>
     <p>We would be glad to walk through this proposal, adjust anything that does not fit, and settle the details together.</p>
     <div class="actions center-actions">
       <a class="btn btn-primary" href="${mail}">Discuss the proposed engagement</a>
