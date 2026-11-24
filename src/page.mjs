@@ -66,7 +66,7 @@ ${cfg.draft ? '<div class="draft-banner" role="note"><strong>Draft for review.</
   <div class="wrap hero-grid">
     <div>
       <p class="kicker">A proposal prepared for ${esc(cfg.client)} by ${esc(cfg.preparedBy)}</p>
-      <h1>Building a more connected ${esc(cfg.client)}</h1>
+      <h1>Helping ${esc(cfg.client)} Work Better Together</h1>
       <p class="lead">A practical path to understanding how your team works best, strengthening collaboration, and building on the momentum already underway.</p>
       <p>Thank you for the conversation, Scott and Catherine. You described a team that is already leaning toward each other: more conversation across the organization, more shared problem solving, and real energy for doing it well. This proposal is a simple way to start in December, keep that momentum through the new year, and make the gains part of how the team works every day.</p>
       <div class="actions">
