@@ -109,7 +109,7 @@ ${cfg.draft ? '<div class="draft-banner" role="note"><strong>Draft for review.</
       <div class="stage-head">
         <span class="stage-tag">Stage A &middot; Included in this proposal</span>
         <h3>December 2026: begin virtually</h3>
-        <p>Target window: ${v(d.sessionWindow)}</p>
+        <p>Timing: ${v(d.sessionWindow)}</p>
       </div>
       <ol class="steps">
         <li><span class="n">1</span><div><h4>Planning conversation</h4><p>A working call with Scott and Catherine to confirm participants, goals, timing, and how the session should be facilitated for this team.</p></div></li>
@@ -125,7 +125,7 @@ ${cfg.draft ? '<div class="draft-banner" role="note"><strong>Draft for review.</
             <li>Agree on a short list of practical actions the team can use in its everyday work.</li>
           </ul></div></li>
         <li><span class="n">6</span><div><h4>Leadership follow-up and written recap</h4><p>A ${v(d.leadershipFollowUp)} follow-up conversation with Scott and Catherine, plus a concise written recap of what the team learned and the next steps agreed in the session.</p></div></li>
-        <li><span class="n">7</span><div><h4>Office hours, clearly bounded</h4><p>For anyone who wants to talk through their results: ${v(d.officeHours)}. Status: ${v(d.officeHoursIncluded)}.</p></div></li>
+        <li><span class="n">7</span><div><h4>Office hours, clearly bounded</h4><p>For anyone who wants to talk through their results: ${v(d.officeHours)}, ${v(d.officeHoursIncluded)}.</p></div></li>
       </ol>
       <p class="note"><b>About sharing results.</b> Individual results belong to the person who took the assessment. Before anything appears on the shared Team Map or in the group session, participants will know what will be shared and how. We will agree on that approach with you during planning.</p>
       <p class="note"><b>Team Map and Collaboration Map.</b> The Working Genius Team Map is included in this stage. It shows how people are wired. The broader Collaboration Map that Catherine has begun, which shows how recurring work actually flows between people, is a separate piece of work described in Stage B and Section 2.</p>
@@ -167,7 +167,7 @@ ${cfg.draft ? '<div class="draft-banner" role="note"><strong>Draft for review.</
       <table>
         <thead><tr><th scope="col">Item</th><th scope="col">Investment</th></tr></thead>
         <tbody>
-          <tr><th scope="row">December virtual foundation <span class="sub">Stage A: planning, assessments, Team Map, virtual session, leadership follow-up, recap</span></th><td>${v(d.fee)}</td></tr>
+          <tr><th scope="row">December virtual foundation <span class="sub">Stage A: planning, assessments, Team Map, virtual session, leadership follow-up, recap, and office hours</span></th><td>${v(d.fee)}</td></tr>
           <tr><th scope="row">Optional in-person working session <span class="sub">Stage B, only if you choose to proceed</span></th><td>${v(p.fee)}<span class="sub">Travel and lodging: ${v(p.travel)}</span><span class="sub">Venue and meals: ${v(p.venueMeals)}</span></td></tr>
           <tr><th scope="row">Optional individual or small-group follow-up</th><td>${v(t.followUpPricing)}</td></tr>
           <tr><th scope="row">Assessment and participant fees</th><td>${v(t.assessmentFees)}</td></tr>

@@ -12,12 +12,12 @@ export const tbd = (label) => ({ tbd: true, label });
 
 export default {
   // Shows the "Draft for review" banner. Set to false only after every item in REVIEW_CHECKLIST.md is approved.
-  draft: true,
+  draft: false,
 
   client: 'ThirdRockMD',
   preparedBy: 'No Alumni',
   preparedDate: 'November 2026',
-  validThrough: tbd('Proposal valid through (date)'),
+  validThrough: 'December 5, 2026',
 
   // Primary contact for the call to action. Verified No Alumni addresses (noalumni.com, November 2026).
   contact: {
@@ -32,34 +32,34 @@ export default {
   facilitators: ['greg', 'matt', 'josh'], // ids from FACILITATORS in src/page.mjs
 
   december: {
-    participants: tbd('Number of participants, e.g. up to 10'),
-    sessionLength: tbd('Session length, e.g. up to 2 hours'),
-    sessionWindow: tbd('Target date window, e.g. week of December 14'),
-    assessmentsOutBy: tbd('Assessments sent by (date)'),
-    leadershipFollowUp: tbd('Leadership follow-up length, e.g. 45 minutes'),
-    officeHours: tbd('Office hours: number and length, e.g. up to four 30-minute conversations'),
-    officeHoursIncluded: tbd('Office hours included in the December fee, or priced separately'),
-    fee: tbd('December virtual foundation fee'),
+    participants: 'up to 10',
+    sessionLength: 'up to 2 hours',
+    sessionWindow: 'December 2026',
+    assessmentsOutBy: 'December 7, 2026',
+    leadershipFollowUp: '90-minute',
+    officeHours: 'three one-hour sessions during December 2026',
+    officeHoursIncluded: 'included in the December per-participant fee',
+    fee: '$525 per participant ($5,250 for 10 participants)',
   },
 
   inPerson: {
-    when: tbd('Target month and date, January or February 2027'),
-    location: tbd('Location'),
-    format: tbd('Session length and number of sessions, e.g. one full day'),
-    facilitators: tbd('Facilitators attending'),
-    participantLimit: tbd('Participant limit'),
-    preparation: tbd('Planning and preparation included'),
-    deliverables: tbd('Tangible deliverables'),
-    fee: tbd('In-person facilitation fee'),
-    travel: tbd('Travel and lodging: included or billed at cost'),
-    venueMeals: tbd('Venue and meals: client provided or billed separately'),
-    decisionBy: tbd('Decision date or planning lead time'),
+    when: 'January or February 2027',
+    location: 'To be determined together',
+    format: 'One full day (proposed)',
+    facilitators: 'Greg Snyder, Matt LaFleur, and Josh Muller',
+    participantLimit: 'Up to 10',
+    preparation: 'Planning and preparation included',
+    deliverables: 'To be agreed together during planning',
+    fee: '$7,500',
+    travel: 'included in the fee',
+    venueMeals: 'included in the fee',
+    decisionBy: 'To be determined together',
   },
 
   terms: {
-    followUpPricing: tbd('Additional individual or small-group follow-up: rate or package'),
-    assessmentFees: tbd('Assessment fees: included for up to N participants, or per-person price'),
-    paymentSchedule: tbd('Payment schedule, e.g. 50% at signing, 50% after the session'),
-    cancellation: tbd('Cancellation and rescheduling terms'),
+    followUpPricing: 'To be determined together, based on need',
+    assessmentFees: 'Included in the per-participant rate for up to 10 participants',
+    paymentSchedule: 'For each component: 50% due when the agreement is signed, and 50% due five days before the session.',
+    cancellation: 'Each session may be rescheduled once at no charge with at least 10 business days of notice. Cancellations made 10 or more business days before a session are refunded, less the cost of any assessments already issued. Within 10 business days, the deposit is non-refundable, and for the in-person session any non-refundable travel or venue costs already committed are not refunded.',
   },
 };
