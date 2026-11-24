@@ -22,7 +22,7 @@ export default {
   // Primary contact for the call to action. Verified No Alumni addresses (noalumni.com, November 2026).
   contact: {
     name: 'Matt LaFleur',
-    email: 'matt@noalumni.com',
+    email: 'connect@noalumni.com',
     emailSubject: 'ThirdRockMD proposal: next steps',
     // Optional scheduling link. This is No Alumni's existing booking page; replace or set to null.
     bookingUrl: 'https://fantastical.app/mattlafleur/new-game-readiness-assessment',

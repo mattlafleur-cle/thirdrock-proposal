@@ -265,7 +265,7 @@ ${cfg.draft ? '<div class="draft-banner" role="note"><strong>Draft for review.</
       <a class="btn btn-primary" href="${mail}">Discuss the proposed engagement</a>
       ${cfg.contact.bookingUrl ? `<a class="btn btn-ghost" href="${esc(cfg.contact.bookingUrl)}" rel="noopener">${esc(cfg.contact.bookingLabel)}</a>` : ''}
     </div>
-    <p class="meta">${esc(cfg.contact.name)} &middot; <a href="${mail}">${esc(cfg.contact.email)}</a></p>
+    <p class="meta"><a href="${mail}">${esc(cfg.contact.email)}</a></p>
   </div>
 </section>
 </main>
