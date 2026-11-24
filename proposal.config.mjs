@@ -52,7 +52,7 @@ export default {
     deliverables: 'To be agreed together during planning',
     fee: '$7,500',
     travel: 'billed at cost, once the location is set',
-    venueMeals: 'included in the fee',
+    venueMeals: 'venue billed at cost; meals included in the fee',
     decisionBy: 'To be determined together',
   },
 
