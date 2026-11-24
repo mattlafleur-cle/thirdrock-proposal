@@ -1,0 +1,10 @@
+{
+  "name": "thirdrock-proposal",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "check": "node scripts/build.mjs && node scripts/check.mjs",
+    "serve": "node scripts/build.mjs && node scripts/serve.mjs"
+  }
+}
