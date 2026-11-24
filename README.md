@@ -27,6 +27,16 @@ the build then refuses to finish while any placeholder remains.
 
 Only `dist/` is client facing. This README, `internal/REVIEW_CHECKLIST.md` (git-ignored), the config, and `scripts/` are never copied into it.
 
+## Search engines and AI: turned off
+
+- Every page carries `noindex, nofollow, noarchive, nosnippet, noimageindex` (plus Google- and Bing-specific tags) and
+  `noai, noimageai`, and sends no referrer.
+- `robots.txt` disallows all crawlers, with named rules for AI crawlers (GPTBot, ClaudeBot, PerplexityBot, CCBot,
+  Google-Extended, and others).
+- No sitemap, `llms.txt`, structured data, Open Graph tags, or canonical tags are published. `npm run check` enforces this.
+- Limits: these are instructions that reputable crawlers honor, not access control. They do not stop a person with the
+  link, and this public GitHub repository itself can still appear in search results.
+
 ## Confidentiality and access control (read before publishing)
 
 - **The GitHub repository `mattlafleur-cle/thirdrock-proposal` is public.** Anything committed and pushed, including

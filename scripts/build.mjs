@@ -21,5 +21,12 @@ await cp(path.join(root, 'src/assets'), path.join(dist, 'assets'), { recursive: 
 await writeFile(path.join(dist, 'index.html'), renderPage(cfg));
 await cp(path.join(root, 'CNAME'), path.join(dist, 'CNAME'));
 await writeFile(path.join(dist, '.nojekyll'), '');
-await writeFile(path.join(dist, 'robots.txt'), 'User-agent: *\nDisallow: /\n');
+// Search engines and AI crawlers: off. No sitemap, no llms.txt, no structured data are published.
+const aiBots = ['GPTBot', 'ChatGPT-User', 'OAI-SearchBot', 'ClaudeBot', 'Claude-Web', 'anthropic-ai', 'Claude-SearchBot', 'Google-Extended',
+  'PerplexityBot', 'Perplexity-User', 'CCBot', 'Bytespider', 'Applebot-Extended', 'Meta-ExternalAgent', 'Amazonbot', 'cohere-ai', 'DuckAssistBot'];
+await writeFile(path.join(dist, 'robots.txt'), [
+  '# Private client proposal. Not for search engines or AI systems.',
+  ...aiBots.flatMap((b) => [`User-agent: ${b}`, 'Disallow: /', '']),
+  'User-agent: *', 'Disallow: /', '',
+].join('\n'));
 console.log(`Built dist/index.html (${cfg.draft ? 'DRAFT' : 'final'}). Open placeholders: ${open.length}`);

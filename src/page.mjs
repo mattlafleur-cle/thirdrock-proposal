@@ -38,7 +38,12 @@ export function renderPage(cfg) {
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="noindex, nofollow, noarchive">
+<!-- Search and AI visibility intentionally off: this is a private client proposal shared by link only. -->
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate">
+<meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+<meta name="bingbot" content="noindex, nofollow, noarchive, nosnippet">
+<meta name="robots" content="noai, noimageai">
+<meta name="referrer" content="no-referrer">
 <title>A proposal for ${esc(cfg.client)} | ${esc(cfg.preparedBy)}</title>
 <meta name="description" content="A proposal prepared for ${esc(cfg.client)} by ${esc(cfg.preparedBy)}.">
 <link rel="icon" type="image/png" href="assets/img/favicon-32.png">

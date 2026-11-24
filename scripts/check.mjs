@@ -23,6 +23,9 @@ try {
 for (const [re, what] of banned) if (re.test(text)) errors.push(`Page contains ${what}.`);
 
 if (!/name="robots" content="noindex/.test(html)) errors.push('Page is missing the noindex meta tag.');
+if (/application\/ld\+json|og:title|rel="canonical"/.test(html)) errors.push('Page should not publish structured data, Open Graph, or canonical tags.');
+const robots = await readFile(new URL('../dist/robots.txt', import.meta.url), 'utf8');
+if (!/User-agent: \*\nDisallow: \//.test(robots) || !/GPTBot/.test(robots)) errors.push('robots.txt must disallow all crawlers, including AI crawlers.');
 if ((html.match(/<h1[\s>]/g) || []).length !== 1) errors.push('Page must have exactly one h1.');
 for (const m of html.matchAll(/<img\b[^>]*>/g)) if (!/\balt=/.test(m[0])) errors.push(`Image without alt: ${m[0].slice(0, 80)}`);
 for (const m of html.matchAll(/href="#([^"]+)"/g)) if (!html.includes(`id="${m[1]}"`)) errors.push(`Broken in-page link: #${m[1]}`);
