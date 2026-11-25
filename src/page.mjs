@@ -175,7 +175,6 @@ ${cfg.draft ? '<div class="draft-banner" role="note"><strong>Draft for review.</
           <tr><th scope="row">Optional individual or small-group follow-up</th><td>${v(t.followUpPricing)}</td></tr>
           <tr><th scope="row">Assessment and participant fees</th><td>${v(t.assessmentFees)}</td></tr>
           <tr><th scope="row">Payment schedule</th><td>${v(t.paymentSchedule)}</td></tr>
-          <tr><th scope="row">Cancellation and rescheduling</th><td>${v(t.cancellation)}</td></tr>
           <tr><th scope="row">Scope changes and additional work</th><td>Approved separately, in writing, before any work begins.</td></tr>
         </tbody>
       </table>
