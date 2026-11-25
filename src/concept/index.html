@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Illustrative concept only. Not linked from the proposal. Search and AI visibility off. -->
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+<meta name="robots" content="noai, noimageai">
+<meta name="referrer" content="no-referrer">
+<title>Collaboration Hub concept</title>
+<style>
+  :root { --bg: #0c1013; --panel: #141a1f; --panel-2: #1a2228; --line: #26313a; --text: #eef3f5; --muted: #9fb0ba; --teal: #11829b; --teal-hi: #3fb3cb; --teal-soft: #0f2a33; --warm: #e3a35a; --ok: #4cc38a; --focus: #ffd27a; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 15px/1.5 "Graphik", "Helvetica Neue", "Segoe UI", system-ui, -apple-system, Arial, sans-serif; }
+  a { color: var(--teal-hi); }
+  :focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; border-radius: 6px; }
+  .concept-bar { background: #ffe9a8; color: #3a2e00; text-align: center; font-size: 13px; padding: 7px 12px; font-weight: 600; }
+  .app { display: grid; grid-template-columns: 230px 1fr; min-height: calc(100vh - 33px); }
+  .side { background: var(--panel); border-right: 1px solid var(--line); padding: 20px 14px; }
+  .side-in { position: sticky; top: 20px; }
+  .logo { font-weight: 700; letter-spacing: 0.02em; padding: 4px 10px 20px; }
+  .logo span { display: block; font-size: 12px; color: var(--muted); font-weight: 500; }
+  .side nav a { display: flex; gap: 10px; align-items: center; color: var(--muted); text-decoration: none; padding: 9px 10px; border-radius: 8px; font-weight: 500; }
+  .side nav a:hover, .side nav a.on { background: var(--teal-soft); color: var(--text); }
+  .side nav svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+  .side .foot { margin-top: 28px; padding: 0 10px; font-size: 12px; color: var(--muted); }
+  main { padding: 26px 30px 40px; }
+  .top { display: flex; justify-content: space-between; align-items: flex-end; gap: 16px; flex-wrap: wrap; margin-bottom: 20px; }
+  h1 { margin: 0; font-size: 26px; font-weight: 600; }
+  .sub { color: var(--muted); margin: 2px 0 0; }
+  .search { background: var(--panel); border: 1px solid var(--line); color: var(--muted); border-radius: 10px; padding: 9px 14px; min-width: 260px; }
+  .grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 16px; }
+  .card { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 18px; }
+  .card h2 { font-size: 15px; margin: 0 0 12px; font-weight: 600; display: flex; justify-content: space-between; align-items: center; }
+  .card h2 small { color: var(--muted); font-weight: 500; font-size: 12px; }
+  .span-4 { grid-column: span 4; } .span-5 { grid-column: span 5; } .span-7 { grid-column: span 7; } .span-8 { grid-column: span 8; } .span-12 { grid-column: span 12; }
+  .stat { display: flex; gap: 14px; }
+  .stat div { flex: 1; background: var(--panel-2); border-radius: 10px; padding: 12px; }
+  .stat b { display: block; font-size: 24px; }
+  .stat span { color: var(--muted); font-size: 12px; }
+  .filters { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 12px; }
+  .filters button { background: var(--panel-2); color: var(--muted); border: 1px solid var(--line); border-radius: 999px; padding: 5px 11px; font: inherit; font-size: 12px; cursor: pointer; }
+  .filters button.on { background: var(--teal); color: #fff; border-color: var(--teal); }
+  .people { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 10px; }
+  .person { background: var(--panel-2); border: 1px solid var(--line); border-radius: 12px; padding: 12px; transition: opacity .2s; }
+  .person.dim { opacity: 0.25; }
+  .avatar { width: 34px; height: 34px; border-radius: 50%; background: var(--teal-soft); color: var(--teal-hi); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 13px; margin-bottom: 8px; }
+  .person b { display: block; }
+  .person .role { color: var(--muted); font-size: 12px; }
+  .tags { display: flex; gap: 4px; margin-top: 8px; flex-wrap: wrap; }
+  .tag { font-size: 11px; font-weight: 700; padding: 2px 7px; border-radius: 6px; background: var(--teal-soft); color: var(--teal-hi); }
+  .tag.f { background: #2a1d12; color: var(--warm); }
+  .bars div { display: grid; grid-template-columns: 96px 1fr 22px; gap: 10px; align-items: center; margin-bottom: 9px; font-size: 13px; }
+  .bar { height: 9px; background: var(--panel-2); border-radius: 6px; overflow: hidden; }
+  .bar i { display: block; height: 100%; background: linear-gradient(90deg, var(--teal), var(--teal-hi)); border-radius: 6px; }
+  .bar i.low { background: var(--warm); }
+  .hint { font-size: 12px; color: var(--muted); margin: 10px 0 0; }
+  .map svg { width: 100%; height: auto; display: block; }
+  .map .n rect { fill: var(--panel-2); stroke: var(--line); }
+  .map .n text { fill: var(--text); font-size: 12px; font-weight: 600; text-anchor: middle; }
+  .map .e { stroke: var(--teal); stroke-width: 2; fill: none; marker-end: url(#arr); opacity: 0.8; }
+  .map .e.w { stroke: var(--warm); stroke-dasharray: 5 5; }
+  .legend { display: flex; gap: 16px; font-size: 12px; color: var(--muted); margin-top: 8px; }
+  .legend i { display: inline-block; width: 18px; height: 3px; background: var(--teal); vertical-align: middle; margin-right: 6px; }
+  .legend i.w { background: var(--warm); }
+  ul.norms { list-style: none; padding: 0; margin: 0; }
+  ul.norms li { padding: 10px 0; border-top: 1px solid var(--line); display: flex; gap: 10px; }
+  ul.norms li:first-child { border-top: 0; }
+  ul.norms b { color: var(--teal-hi); min-width: 18px; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th, td { text-align: left; padding: 10px 8px; border-top: 1px solid var(--line); }
+  th { color: var(--muted); font-weight: 500; font-size: 12px; border-top: 0; }
+  .pill { font-size: 11px; font-weight: 700; padding: 3px 8px; border-radius: 999px; }
+  .pill.ok { background: #12301f; color: var(--ok); } .pill.go { background: var(--teal-soft); color: var(--teal-hi); } .pill.new { background: #2a1d12; color: var(--warm); }
+  .next { list-style: none; margin: 14px 0 0; padding: 0; }
+  .next li { display: grid; grid-template-columns: 44px 1fr auto; gap: 10px; padding: 9px 0; border-top: 1px solid var(--line); font-size: 13px; }
+  .next .when { color: var(--teal-hi); font-weight: 700; }
+  .next .who { color: var(--muted); }
+  .grid > * { min-width: 0; }
+  .disclaimer { margin-top: 22px; font-size: 12px; color: var(--muted); text-align: center; }
+  @media (max-width: 980px) { .span-4, .span-5, .span-7, .span-8 { grid-column: span 12; } }
+  @media (max-width: 760px) {
+    .app { grid-template-columns: 1fr; }
+    .side { padding: 12px; min-width: 0; } .side-in { position: static; }
+    .side nav { display: flex; overflow-x: auto; gap: 4px; }
+    .side nav a { white-space: nowrap; }
+    .logo { padding-bottom: 10px; } .side .foot { display: none; }
+    main { padding: 18px 14px 30px; }
+    .search { min-width: 0; width: 100%; }
+    .stat { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .people { grid-template-columns: 1fr 1fr; }
+    .next li { grid-template-columns: 40px 1fr; } .next .who { grid-column: 2; }
+    table, thead, tbody, tr, td { display: block; } thead { display: none; }
+    tr { padding: 10px 0; border-top: 1px solid var(--line); } td { border: 0; padding: 2px 0; }
+    td:nth-child(2)::before { content: "Owner: "; color: var(--muted); } td:nth-child(3)::before { content: "Due: "; color: var(--muted); }
+  }
+</style>
+</head>
+<body>
+<div class="concept-bar" role="note">Illustrative concept. Fictional people and data. Not a product and not connected to any system.</div>
+<div class="app">
+  <aside class="side"><div class="side-in">
+    <div class="logo">ThirdRockMD Hub<span>Team home base</span></div>
+    <nav aria-label="Hub sections">
+      <a class="on" href="#home"><svg viewBox="0 0 24 24"><path d="M3 11 12 4l9 7v9H3z"/></svg>Home</a>
+      <a href="#people"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.8-3.5 3.4-5.5 6.5-5.5s5.7 2 6.5 5.5M16 4.5a3.5 3.5 0 0 1 0 7M18 14.8c2 .7 3.2 2.5 3.6 5.2"/></svg>People</a>
+      <a href="#map"><svg viewBox="0 0 24 24"><circle cx="5" cy="6" r="2.5"/><circle cx="19" cy="6" r="2.5"/><circle cx="12" cy="18" r="2.5"/><path d="M7.4 6.5h9.2M6.3 8.2l4.4 7.7M17.7 8.2l-4.4 7.7"/></svg>Collaboration Map</a>
+      <a href="#norms"><svg viewBox="0 0 24 24"><path d="M5 4h14v16H5zM9 9h6M9 13h6M9 17h3"/></svg>How we work</a>
+      <a href="#actions"><svg viewBox="0 0 24 24"><path d="m4 12 5 5L20 6"/></svg>Commitments</a>
+    </nav>
+    <div class="foot">Concept by No Alumni</div>
+  </div></aside>
+  <main>
+    <div class="top" id="home">
+      <div><h1>Good morning, team</h1><p class="sub">Everything about how we work together, in one place.</p></div>
+      <div class="search" aria-hidden="true">Search people, work, or norms</div>
+    </div>
+
+    <div class="grid">
+      <section class="card span-8" aria-labelledby="pulse-h">
+        <h2 id="pulse-h">This week <small>Example data</small></h2>
+        <div class="stat">
+          <div><b>10</b><span>Team members</span></div>
+          <div><b>24</b><span>Mapped handoffs</span></div>
+          <div><b>6</b><span>Open commitments</span></div>
+          <div><b>3</b><span>Handoffs to watch</span></div>
+        </div>
+        <ul class="next">
+          <li><span class="when">Tue</span><span>Clinical and field services handoff review</span><span class="who">Avery, Morgan</span></li>
+          <li><span class="when">Wed</span><span>New client launch kickoff</span><span class="who">Sam, Casey</span></li>
+          <li><span class="when">Fri</span><span>Training calendar goes live</span><span class="who">Riley</span></li>
+        </ul>
+      </section>
+      <section class="card span-4" aria-labelledby="wg-h">
+        <h2 id="wg-h">Team Map <small>Working Genius</small></h2>
+        <div class="bars">
+          <div><span>Wonder</span><span class="bar"><i style="width:40%"></i></span><span>4</span></div>
+          <div><span>Invention</span><span class="bar"><i style="width:50%"></i></span><span>5</span></div>
+          <div><span>Discernment</span><span class="bar"><i style="width:60%"></i></span><span>6</span></div>
+          <div><span>Galvanizing</span><span class="bar"><i class="low" style="width:10%"></i></span><span>1</span></div>
+          <div><span>Enablement</span><span class="bar"><i style="width:40%"></i></span><span>4</span></div>
+          <div><span>Tenacity</span><span class="bar"><i class="low" style="width:20%"></i></span><span>2</span></div>
+        </div>
+        <p class="hint">Galvanizing and Tenacity are thin. Watch launches and follow-through.</p>
+      </section>
+
+      <section class="card span-12" id="people" aria-labelledby="people-h">
+        <h2 id="people-h">People <small>Filter by working genius</small></h2>
+        <div class="filters" role="group" aria-label="Filter people by genius">
+          <button class="on" data-f="all" aria-pressed="true">Everyone</button>
+          <button data-f="W" aria-pressed="false">Wonder</button><button data-f="I" aria-pressed="false">Invention</button><button data-f="D" aria-pressed="false">Discernment</button>
+          <button data-f="G" aria-pressed="false">Galvanizing</button><button data-f="E" aria-pressed="false">Enablement</button><button data-f="T" aria-pressed="false">Tenacity</button>
+        </div>
+        <div class="people" id="people-list"></div>
+      </section>
+
+      <section class="card span-7 map" id="map" aria-labelledby="map-h">
+        <h2 id="map-h">Collaboration Map <small>Recurring work, by team</small></h2>
+        <svg viewBox="0 0 560 300" role="img" aria-label="Example map of how recurring work flows between teams">
+          <defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 10 5 0 10z" fill="#3fb3cb"/></marker></defs>
+          <path class="e" d="M150 60 C 220 40, 260 40, 320 58"/>
+          <path class="e" d="M400 85 C 430 120, 430 150, 410 182"/>
+          <path class="e w" d="M330 214 C 260 240, 220 240, 160 222"/>
+          <path class="e" d="M95 85 C 70 120, 70 150, 90 182"/>
+          <path class="e" d="M160 200 C 220 170, 260 140, 318 100"/>
+          <path class="e" d="M470 72 C 510 90, 520 120, 500 140"/>
+          <g class="n"><rect x="30" y="35" width="130" height="48" rx="10"/><text x="95" y="64">Client Programs</text></g>
+          <g class="n"><rect x="320" y="35" width="150" height="48" rx="10"/><text x="395" y="64">Clinical Direction</text></g>
+          <g class="n"><rect x="30" y="185" width="130" height="48" rx="10"/><text x="95" y="214">Operations</text></g>
+          <g class="n"><rect x="330" y="185" width="150" height="48" rx="10"/><text x="405" y="214">Field Services</text></g>
+          <g class="n"><rect x="440" y="140" width="110" height="40" rx="10"/><text x="495" y="165">Training</text></g>
+        </svg>
+        <div class="legend"><span><i></i>Regular handoff</span><span><i class="w"></i>Handoff to watch</span></div>
+      </section>
+
+      <section class="card span-5" id="norms" aria-labelledby="norms-h">
+        <h2 id="norms-h">How we work <small>Team norms</small></h2>
+        <ul class="norms">
+          <li><b>1</b><span>Ask across before asking up.</span></li>
+          <li><b>2</b><span>Name the handoff: who, what, and by when.</span></li>
+          <li><b>3</b><span>Invite people by the stage of the work, not by habit.</span></li>
+          <li><b>4</b><span>Say what drains you, so work can move to someone it energizes.</span></li>
+          <li><b>5</b><span>Close the loop on every request within one business day.</span></li>
+        </ul>
+      </section>
+
+      <section class="card span-12" id="actions" aria-labelledby="act-h">
+        <h2 id="act-h">Commitments from our team session <small>Example data</small></h2>
+        <table>
+          <thead><tr><th scope="col">Commitment</th><th scope="col">Owner</th><th scope="col">Due</th><th scope="col">Status</th></tr></thead>
+          <tbody>
+            <tr><td>Add a named owner to every field-to-clinical handoff</td><td>Avery R.</td><td>Week 2</td><td><span class="pill go">In progress</span></td></tr>
+            <tr><td>Move weekly planning to a Discernment-first agenda</td><td>Jordan M.</td><td>Week 1</td><td><span class="pill ok">Done</span></td></tr>
+            <tr><td>Pair a Galvanizer with each new client launch</td><td>Sam K.</td><td>Week 3</td><td><span class="pill new">Not started</span></td></tr>
+            <tr><td>Publish the training calendar in the Hub</td><td>Riley P.</td><td>Week 2</td><td><span class="pill go">In progress</span></td></tr>
+          </tbody>
+        </table>
+      </section>
+    </div>
+    <p class="disclaimer">Illustrative concept prepared by No Alumni. All names, roles, and numbers are fictional. A real Hub would begin with discovery and a prototype, would hold no patient information, and would have its security requirements defined and verified before use.</p>
+  </main>
+</div>
+<script>
+  // Fictional team for the concept. W I D G E E T = the six Working Genius types.
+  var people = [
+    ['Avery R.', 'Clinical lead', 'DE', 'GT'], ['Jordan M.', 'Operations', 'DT', 'WI'], ['Sam K.', 'Client programs', 'GE', 'DT'],
+    ['Riley P.', 'Training', 'ET', 'WI'], ['Morgan T.', 'Field services', 'IT', 'GE'], ['Casey L.', 'Communications', 'WI', 'ET'],
+    ['Drew H.', 'Medical direction', 'WD', 'GT'], ['Quinn S.', 'Scheduling', 'ET', 'WI'], ['Reese D.', 'Technology', 'ID', 'GE'], ['Parker V.', 'Wellness', 'WE', 'IT']
+  ];
+  var names = { W: 'Wonder', I: 'Invention', D: 'Discernment', G: 'Galvanizing', E: 'Enablement', T: 'Tenacity' };
+  var list = document.getElementById('people-list');
+  list.innerHTML = people.map(function (p) {
+    var init = p[0].split(' ').map(function (x) { return x[0]; }).join('');
+    var g = p[2].split('').map(function (c) { return '<span class="tag" title="Genius: ' + names[c] + '">' + names[c] + '</span>'; }).join('');
+    var f = p[3].split('').map(function (c) { return '<span class="tag f" title="Frustration: ' + names[c] + '">' + c + '</span>'; }).join('');
+    return '<div class="person" data-g="' + p[2] + '"><div class="avatar" aria-hidden="true">' + init + '</div><b>' + p[0] + '</b><span class="role">' + p[1] + '</span><div class="tags">' + g + f + '</div></div>';
+  }).join('');
+  document.querySelectorAll('.filters button').forEach(function (b) {
+    b.addEventListener('click', function () {
+      document.querySelectorAll('.filters button').forEach(function (x) { x.classList.remove('on'); x.setAttribute('aria-pressed', 'false'); });
+      b.classList.add('on'); b.setAttribute('aria-pressed', 'true');
+      var f = b.getAttribute('data-f');
+      document.querySelectorAll('.person').forEach(function (el) { el.classList.toggle('dim', f !== 'all' && el.getAttribute('data-g').indexOf(f) < 0); });
+    });
+  });
+</script>
+</body>
+</html>

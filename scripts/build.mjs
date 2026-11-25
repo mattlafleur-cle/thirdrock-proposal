@@ -23,6 +23,8 @@ await cp(path.join(root, 'src/assets'), path.join(dist, 'assets'), { recursive: 
 const cssHash = createHash('sha1').update(await readFile(path.join(root, 'src/assets/styles.css'))).digest('hex').slice(0, 10);
 await writeFile(path.join(dist, 'index.html'), renderPage(cfg).replace('href="assets/styles.css"', `href="assets/styles.css?v=${cssHash}"`));
 await cp(path.join(root, 'CNAME'), path.join(dist, 'CNAME'));
+// Collaboration Hub concept: unlinked page for live demos, at /hub-concept/. Fictional data only.
+await cp(path.join(root, 'src/concept'), path.join(dist, 'hub-concept'), { recursive: true });
 await writeFile(path.join(dist, '.nojekyll'), '');
 // Search engines and AI crawlers: off. No sitemap, no llms.txt, no structured data are published.
 const aiBots = ['GPTBot', 'ChatGPT-User', 'OAI-SearchBot', 'ClaudeBot', 'Claude-Web', 'anthropic-ai', 'Claude-SearchBot', 'Google-Extended',

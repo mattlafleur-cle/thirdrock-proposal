@@ -23,6 +23,10 @@ try {
 for (const [re, what] of banned) if (re.test(text)) errors.push(`Page contains ${what}.`);
 
 if (!/name="robots" content="noindex/.test(html)) errors.push('Page is missing the noindex meta tag.');
+const hub = await readFile(new URL('../dist/hub-concept/index.html', import.meta.url), 'utf8');
+if (/[\u2014\u2013]/.test(hub)) errors.push('Hub concept contains a dash character.');
+if (!/name="robots" content="noindex/.test(hub)) errors.push('Hub concept is missing noindex.');
+if (/hub-concept/.test(html)) errors.push('Proposal page links to the hub concept; it should stay unlinked.');
 if (/application\/ld\+json|og:title|rel="canonical"/.test(html)) errors.push('Page should not publish structured data, Open Graph, or canonical tags.');
 const robots = await readFile(new URL('../dist/robots.txt', import.meta.url), 'utf8');
 if (!/User-agent: \*\nDisallow: \//.test(robots) || !/GPTBot/.test(robots)) errors.push('robots.txt must disallow all crawlers, including AI crawlers.');
