@@ -215,12 +215,11 @@ ${cfg.draft ? '<div class="draft-banner" role="note"><strong>Draft for review.</
       <div class="path-step path-daily"><span class="dot"></span><b>Daily practice</b><span>How the team works, every week</span></div>
     </div>
     <div class="bgrid">
-      <article class="bcard bcard-link">
+      <article class="bcard">
         <div class="bicon"><svg viewBox="0 0 48 48" aria-hidden="true" focusable="false"><circle cx="12" cy="14" r="5"/><circle cx="36" cy="12" r="5"/><circle cx="24" cy="34" r="5"/><circle cx="40" cy="36" r="4"/><path d="M16.5 15.5 31 12.8M14.5 18.5l7 11.5M33.5 16.5 26 29.5M28.5 35.2l7.5.8"/></svg></div>
-        <h3><a class="card-link" href="hub-concept/" target="_blank" rel="noopener">Collaboration Map</a></h3>
+        <h3>Collaboration Map</h3>
         <p>Build on Catherine&#39;s concept to show how recurring work flows between people, paired with the Team Map.</p>
         <ul class="chips"><li>Who does what</li><li>Handoffs and dependencies</li><li>A living visual</li></ul>
-        <span class="card-cta" aria-hidden="true">See an illustrative concept &rarr;</span>
       </article>
       <article class="bcard">
         <div class="bicon"><svg viewBox="0 0 48 48" aria-hidden="true" focusable="false"><path d="M24 41s-14-8.6-14-19a8 8 0 0 1 14-5.3A8 8 0 0 1 38 22c0 10.4-14 19-14 19Z"/><path d="M17 24h6l2-4 3 8 2-4h3"/></svg></div>
@@ -234,11 +233,12 @@ ${cfg.draft ? '<div class="draft-banner" role="note"><strong>Draft for review.</
         <p>Clearer priorities, ownership, and rhythm between vision and execution.</p>
         <ul class="chips"><li>Delegation</li><li>Meeting rhythm</li><li>Vision and execution</li></ul>
       </article>
-      <article class="bcard">
+      <article class="bcard bcard-link">
         <div class="bicon"><svg viewBox="0 0 48 48" aria-hidden="true" focusable="false"><rect x="8" y="10" width="32" height="24" rx="3"/><path d="M8 17h32M16 40h16M24 34v6"/><path d="M14 23h8M14 28h12"/></svg></div>
-        <h3>Collaboration Hub</h3>
+        <h3><a class="card-link" href="hub-concept/" target="_blank" rel="noopener">Collaboration Hub</a></h3>
         <p>A concept to explore: one inward-facing home for the directory, responsibilities, and team norms. Discovery and a prototype come first.</p>
         <ul class="chips"><li>Concept stage</li><li>No patient data</li><li>Prototype first</li></ul>
+        <span class="card-cta" aria-hidden="true">See an illustrative concept &rarr;</span>
       </article>
       <article class="bcard">
         <div class="bicon"><svg viewBox="0 0 48 48" aria-hidden="true" focusable="false"><path d="M10 38h28"/><path d="M14 38V28M22 38V22M30 38V16"/><path d="m28 12 4-4 4 4M32 8v8"/></svg></div>
