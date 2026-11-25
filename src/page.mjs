@@ -171,7 +171,7 @@ ${cfg.draft ? '<div class="draft-banner" role="note"><strong>Draft for review.</
         <thead><tr><th scope="col">Item</th><th scope="col">Investment</th></tr></thead>
         <tbody>
           <tr><th scope="row">December virtual foundation <span class="sub">Stage A: planning, assessments, Team Map, virtual session, leadership follow-up, recap, and office hours</span></th><td>${v(d.fee)}</td></tr>
-          <tr><th scope="row">Optional in-person working session <span class="sub">Stage B, only if you choose to proceed</span></th><td>${v(p.fee)}<span class="sub">Travel and lodging: ${v(p.travel)}</span><span class="sub">Venue and meals: ${v(p.venueMeals)}</span></td></tr>
+          <tr><th scope="row">Optional in-person working session <span class="sub">Stage B, only if you choose to proceed</span></th><td>${v(p.fee)}<span class="sub">Travel and lodging: ${v(p.travel)}</span><span class="sub">Venue and meals: ${v(p.venueMeals)}</span><span class="sub">These details are flexible and can be adjusted together once the location and venue are settled.</span></td></tr>
           <tr><th scope="row">Optional individual or small-group follow-up</th><td>${v(t.followUpPricing)}</td></tr>
           <tr><th scope="row">Assessment and participant fees</th><td>${v(t.assessmentFees)}</td></tr>
           <tr><th scope="row">Payment schedule</th><td>${v(t.paymentSchedule)}</td></tr>
