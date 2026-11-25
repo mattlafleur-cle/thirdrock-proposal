@@ -160,7 +160,6 @@ ${cfg.draft ? '<div class="draft-banner" role="note"><strong>Draft for review.</
           <div><dt>Facilitators</dt><dd>${v(p.facilitators)}</dd></div>
           <div><dt>Participants</dt><dd>${v(p.participantLimit)}</dd></div>
           <div><dt>Preparation</dt><dd>${v(p.preparation)}</dd></div>
-          <div><dt>Deliverables</dt><dd>${v(p.deliverables)}</dd></div>
           <div><dt>Decide by</dt><dd>${v(p.decisionBy)}</dd></div>
         </dl>
       </div>
