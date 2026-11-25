@@ -237,7 +237,7 @@ ${cfg.draft ? '<div class="draft-banner" role="note"><strong>Draft for review.</
         <div class="bicon"><svg viewBox="0 0 48 48" aria-hidden="true" focusable="false"><rect x="8" y="10" width="32" height="24" rx="3"/><path d="M8 17h32M16 40h16M24 34v6"/><path d="M14 23h8M14 28h12"/></svg></div>
         <h3><a class="card-link" href="hub-concept/" target="_blank" rel="noopener">Collaboration Hub</a></h3>
         <p>A concept to explore: one inward-facing home for the directory, responsibilities, and team norms. Discovery and a prototype come first.</p>
-        <ul class="chips"><li>Concept stage</li><li>No patient data</li><li>Prototype first</li></ul>
+        <ul class="chips"><li>Concept stage</li><li>Prototype first</li></ul>
         <span class="card-cta" aria-hidden="true">See an illustrative concept &rarr;</span>
       </article>
       <article class="bcard">
