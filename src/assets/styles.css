@@ -252,3 +252,11 @@ mark.tbd { background: #fff1b8; color: #3d3100; border: 1px dashed #b08a00; bord
 .path-build .dot { border-color: var(--orange); background: linear-gradient(90deg, var(--orange) 50%, var(--paper) 50%); }
 .path-daily .dot { width: 18px; height: 18px; top: -9px; border: 3px solid var(--green); background: radial-gradient(circle, var(--green) 0 3px, var(--paper) 3.5px); }
 .about p + p { margin-top: 0.8em; }
+/* Collaboration Map card links to the Hub concept; whole card is clickable */
+.bcard-link { position: relative; cursor: pointer; }
+.bcard-link:hover { border-color: var(--green); }
+.card-link { color: inherit; text-decoration: none; }
+.card-link::after { content: ""; position: absolute; inset: 0; border-radius: 16px; z-index: 2; }
+.card-link:focus-visible { outline: none; }
+.card-link:focus-visible::after { outline: 3px solid var(--focus); outline-offset: 3px; }
+.card-cta { margin-top: 12px; font-size: 0.88rem; font-weight: 700; color: var(--green); }
