@@ -1,6 +1,7 @@
 // Builds the client-facing page into dist/. Only dist/ is ever meant to be served.
 // Internal files (README.md, REVIEW_CHECKLIST.md, proposal.config.mjs, scripts/) are never copied.
-import { mkdir, rm, writeFile, cp } from 'node:fs/promises';
+import { mkdir, rm, writeFile, cp, readFile } from 'node:fs/promises';
+import { createHash } from 'node:crypto';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import cfg from '../proposal.config.mjs';
@@ -18,7 +19,9 @@ if (!cfg.draft && open.length) {
 await rm(dist, { recursive: true, force: true });
 await mkdir(path.join(dist, 'assets'), { recursive: true });
 await cp(path.join(root, 'src/assets'), path.join(dist, 'assets'), { recursive: true });
-await writeFile(path.join(dist, 'index.html'), renderPage(cfg));
+// Cache busting: the stylesheet URL changes whenever its content does, so browsers never pair new HTML with old CSS.
+const cssHash = createHash('sha1').update(await readFile(path.join(root, 'src/assets/styles.css'))).digest('hex').slice(0, 10);
+await writeFile(path.join(dist, 'index.html'), renderPage(cfg).replace('href="assets/styles.css"', `href="assets/styles.css?v=${cssHash}"`));
 await cp(path.join(root, 'CNAME'), path.join(dist, 'CNAME'));
 await writeFile(path.join(dist, '.nojekyll'), '');
 // Search engines and AI crawlers: off. No sitemap, no llms.txt, no structured data are published.
