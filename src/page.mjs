@@ -131,7 +131,7 @@ ${cfg.draft ? '<div class="draft-banner" role="note"><strong>Draft for review.</
             <li>Agree on a short list of practical actions the team can use in its everyday work.</li>
           </ul></div></li>
         <li><span class="n">6</span><div><h4>Leadership follow-up and written recap</h4><p>A ${v(d.leadershipFollowUp)} follow-up conversation with Scott and Catherine, plus a concise written recap of what the team learned and the next steps agreed in the session.</p></div></li>
-        <li><span class="n">7</span><div><h4>Office hours, clearly bounded</h4><p>For anyone who wants to talk through their results: ${v(d.officeHours)}, ${v(d.officeHoursIncluded)}.</p></div></li>
+        <li><span class="n">7</span><div><h4>Office hours, optional</h4><p>We make ourselves available to your team for one-on-one sessions to debrief individual assessment results, for anyone who would like a deeper conversation about what their results mean for their work. We will offer ${v(d.officeHours)}, ${v(d.officeHoursIncluded)}.</p></div></li>
       </ol>
       <p class="note"><b>About sharing results.</b> Individual results belong to the person who took the assessment. Before anything appears on the shared Team Map or in the group session, participants will know what will be shared and how. We will agree on that approach with you during planning.</p>
       <p class="note"><b>Team Map and Collaboration Map.</b> The Working Genius Team Map is included in this stage. It shows how people are wired. The broader Collaboration Map that Catherine has begun, which shows how recurring work actually flows between people, is a separate piece of work described in Stage B and Section 2.</p>
