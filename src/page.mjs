@@ -167,7 +167,6 @@ ${cfg.draft ? '<div class="draft-banner" role="note"><strong>Draft for review.</
 
     <div class="invest" id="investment" aria-labelledby="invest-h">
       <h3 id="invest-h">Investment and terms</h3>
-      <p>Each item is priced on its own. Nothing optional is bundled into the December fee.</p>
       <table>
         <thead><tr><th scope="col">Item</th><th scope="col">Investment</th></tr></thead>
         <tbody>
