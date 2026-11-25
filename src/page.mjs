@@ -13,7 +13,7 @@ const v = (x) => {
 const FACILITATORS = {
   greg: { name: 'Greg Snyder', role: 'No Alumni Co-founder and CEO. Certified Working Genius Facilitator. Culture-Building Guru.', img: 'greg.webp' },
   matt: { name: 'Matt LaFleur', role: 'No Alumni Co-founder. Chief Integrator. Experienced Fractional CFO and Working Genius Facilitator.', img: 'matt.webp' },
-  josh: { name: 'Josh Muller', role: 'Chief Visionary, No Alumni. Business coach who built and sold a company of his own.', img: 'josh.webp' },
+  josh: { name: 'Josh Muller', role: 'Chief Visionary, No Alumni. Business coach who built and sold a large company of his own and helps owners get unstuck.', img: 'josh.webp' },
 };
 
 // Decorative network motif: points of contact across a dispersed team.
