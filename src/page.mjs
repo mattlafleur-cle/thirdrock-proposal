@@ -210,29 +210,47 @@ ${cfg.draft ? '<div class="draft-banner" role="note"><strong>Draft for review.</
   <div class="wrap">
     <p class="kicker">Section 2 &middot; Possible later</p>
     <h2 id="build-h">Build on the foundation</h2>
-    <p class="lead">You told us you do not want a workshop that is remembered fondly and then forgotten. These are ways we could help the work become part of daily practice. Each one would be its own conversation, scope, and agreement. None is part of the December proposal.</p>
-    <div class="later-grid">
-      <article class="later">
-        <h3>Collaboration Map development</h3>
-        <p>Build on Catherine's concept: capture recurring work, what each person delivers, the inputs they need, who they work with, and who depends on the result. Where useful, combine it with the Working Genius Team Map to produce a usable visual and a working document the team keeps current. Format, scope, and level of detail to be decided together.</p>
+    <p class="lead">Ways to make the work part of daily practice, not a one-time event.</p>
+    <div class="path" aria-label="From foundation to daily practice">
+      <div class="path-step path-now"><span class="dot"></span><b>December foundation</b><span>Shared language and a Team Map</span></div>
+      <div class="path-line" aria-hidden="true"></div>
+      <div class="path-step"><span class="dot"></span><b>Build on it</b><span>Options below, chosen together</span></div>
+      <div class="path-line" aria-hidden="true"></div>
+      <div class="path-step"><span class="dot"></span><b>Daily practice</b><span>How the team works, every week</span></div>
+    </div>
+    <div class="bgrid">
+      <article class="bcard">
+        <div class="bicon"><svg viewBox="0 0 48 48" aria-hidden="true" focusable="false"><circle cx="12" cy="14" r="5"/><circle cx="36" cy="12" r="5"/><circle cx="24" cy="34" r="5"/><circle cx="40" cy="36" r="4"/><path d="M16.5 15.5 31 12.8M14.5 18.5l7 11.5M33.5 16.5 26 29.5M28.5 35.2l7.5.8"/></svg></div>
+        <h3>Collaboration Map</h3>
+        <p>Build on Catherine&#39;s concept to show how recurring work flows between people, paired with the Team Map.</p>
+        <ul class="chips"><li>Who does what</li><li>Handoffs and dependencies</li><li>A living visual</li></ul>
       </article>
-      <article class="later">
+      <article class="bcard">
+        <div class="bicon"><svg viewBox="0 0 48 48" aria-hidden="true" focusable="false"><path d="M24 41s-14-8.6-14-19a8 8 0 0 1 14-5.3A8 8 0 0 1 38 22c0 10.4-14 19-14 19Z"/><path d="M17 24h6l2-4 3 8 2-4h3"/></svg></div>
         <h3>Culture by design</h3>
-        <p>Turn the culture you want into things people can actually see and practice: shared expectations, meeting habits, decision principles, onboarding, and simple ways to check progress. Facilitation and accountability support available as separately scoped services.</p>
+        <p>Turn the culture you want into habits people can see and practice.</p>
+        <ul class="chips"><li>Shared expectations</li><li>Meeting habits</li><li>Decision principles</li></ul>
       </article>
-      <article class="later">
+      <article class="bcard">
+        <div class="bicon"><svg viewBox="0 0 48 48" aria-hidden="true" focusable="false"><circle cx="24" cy="24" r="6"/><path d="M24 8v6M24 34v6M8 24h6M34 24h6M12.7 12.7l4.2 4.2M31.1 31.1l4.2 4.2M12.7 35.3l4.2-4.2M31.1 16.9l4.2-4.2"/></svg></div>
         <h3>Leadership and operating practices</h3>
-        <p>Practical help with priorities, ownership, delegation, handoffs, meeting rhythm, and the balance between vision and execution. We draw where helpful on ideas from Rocket Fuel and the Visionary and Integrator roles (Gino Wickman and Mark C. Winters), the Entrepreneurial Operating System, The Time-Rich Company, and Science of People, explained in plain English and applied to your team. These names belong to their authors and owners; we reference their ideas and do not reproduce their proprietary programs.</p>
+        <p>Clearer priorities, ownership, and rhythm between vision and execution.</p>
+        <ul class="chips"><li>Delegation</li><li>Meeting rhythm</li><li>Vision and execution</li></ul>
       </article>
-      <article class="later">
-        <h3>An internal Collaboration Hub</h3>
-        <p>A concept to explore, not an existing product: one inward-facing place for the team directory, responsibilities, the Collaboration Map, resources, team norms, and action tracking. It would start with a short discovery and prototype phase before any commitment to custom software. It would not hold patient information, and any security or compliance requirements would be defined and verified as part of that work.</p>
+      <article class="bcard">
+        <div class="bicon"><svg viewBox="0 0 48 48" aria-hidden="true" focusable="false"><rect x="8" y="10" width="32" height="24" rx="3"/><path d="M8 17h32M16 40h16M24 34v6"/><path d="M14 23h8M14 28h12"/></svg></div>
+        <h3>Collaboration Hub</h3>
+        <p>A concept to explore: one inward-facing home for the directory, responsibilities, and team norms. Discovery and a prototype come first.</p>
+        <ul class="chips"><li>Concept stage</li><li>No patient data</li><li>Prototype first</li></ul>
       </article>
-      <article class="later">
+      <article class="bcard">
+        <div class="bicon"><svg viewBox="0 0 48 48" aria-hidden="true" focusable="false"><path d="M10 38h28"/><path d="M14 38V28M22 38V22M30 38V16"/><path d="m28 12 4-4 4 4M32 8v8"/></svg></div>
         <h3>Continued team development</h3>
-        <p>Facilitation, coaching, focused small-group conversations, and periodic check-ins. If the leadership experience is valuable, we would be glad to explore a separate Working Genius experience for your wider medic team, with its own scope, participant count, and pricing.</p>
+        <p>Coaching, small-group conversations, and periodic check-ins, plus a possible session for your wider medic team.</p>
+        <ul class="chips"><li>Coaching</li><li>Check-ins</li><li>Medic team session</li></ul>
       </article>
     </div>
+    <p class="fine">Each option is scoped and agreed separately; none is part of the December proposal. Ideas drawn from Rocket Fuel (Gino Wickman and Mark C. Winters), the Entrepreneurial Operating System, The Time-Rich Company, and Science of People are referenced with credit to their owners; we do not reproduce their proprietary programs.</p>
   </div>
 </section>
 
