@@ -119,7 +119,7 @@ ${cfg.draft ? '<div class="draft-banner" role="note"><strong>Draft for review.</
       </div>
       <ol class="steps">
         <li><span class="n">1</span><div><h4>Planning conversation</h4><p>A working call with Scott and Catherine to confirm participants, goals, timing, and how the session should be facilitated for this team.</p></div></li>
-        <li><span class="n">2</span><div><h4>Working Genius assessments</h4><p>Assessments for ${v(d.participants)} participants. Each person receives an individual link and simple instructions. Sent by ${v(d.assessmentsOutBy)}.</p></div></li>
+        <li><span class="n">2</span><div><h4>Working Genius assessments</h4><p>Assessments for ${v(d.participants)} participants. Each person receives an individual link and simple instructions. Sent on ${v(d.assessmentsOutBy)}.</p></div></li>
         <li><span class="n">3</span><div><h4>Results in hand before the session</h4><p>Every participant receives their own results ahead of time, so they can read them, reflect, and arrive with questions instead of meeting their results for the first time in front of the group.</p></div></li>
         <li><span class="n">4</span><div><h4>Your Working Genius Team Map</h4><p>A customized map of the group's results showing where the team's energy is concentrated, where it is thin, and how individual strengths connect. It is built from completed assessments and the information participants agree to share.</p></div></li>
         <li><span class="n">5</span><div><h4>One facilitated virtual team session</h4><p>Length: ${v(d.sessionLength)}. Interactive, practical, and built around the team's real work. In the session we will:</p>
