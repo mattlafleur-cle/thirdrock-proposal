@@ -246,3 +246,5 @@ mark.tbd { background: #fff1b8; color: #3d3100; border: 1px dashed #b08a00; bord
   .bcard:nth-child(5) { grid-column: auto; }
   .bcard { padding: 18px 16px; }
 }
+.s1 .glance { margin: 8px 0 0; max-width: 44rem; }
+.stage { scroll-margin-top: 90px; }

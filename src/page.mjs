@@ -80,10 +80,6 @@ ${cfg.draft ? '<div class="draft-banner" role="note"><strong>Draft for review.</
       <div class="actions">
         <a class="btn btn-primary" href="#start">See the proposed engagement</a>
       </div>
-      <div class="glance" aria-label="Proposal at a glance">
-        <a class="glance-card" href="#start"><span class="glance-k">${v(d.sessionWindow)}</span><b>Virtual foundation</b><span>${v(d.fee)}</span></a>
-        <a class="glance-card glance-opt" href="#investment"><span class="glance-k">${v(p.when)} &middot; Optional</span><b>In-person working day</b><span>${v(p.fee)}</span></a>
-      </div>
       <p class="meta">Prepared ${esc(cfg.preparedDate)}. Valid through ${v(cfg.validThrough)}.</p>
     </div>
     <div class="hero-art">${network()}</div>
@@ -95,6 +91,10 @@ ${cfg.draft ? '<div class="draft-banner" role="note"><strong>Draft for review.</
     <p class="kicker">Section 1 &middot; The initial engagement</p>
     <h2 id="start-h">Start here: Working Genius for your team</h2>
     <p class="lead">Two stages. A focused virtual foundation in December, then an optional in-person working session in early 2027 if it is the right next step.</p>
+    <div class="glance" aria-label="Proposal at a glance">
+        <a class="glance-card" href="#stage-a"><span class="glance-k">${v(d.sessionWindow)}</span><b>Virtual foundation</b><span>${v(d.fee)}</span></a>
+        <a class="glance-card glance-opt" href="#stage-b"><span class="glance-k">${v(p.when)} &middot; Optional</span><b>In-person working day</b><span>${v(p.fee)}</span></a>
+      </div>
 
     <div class="why">
       <div>
@@ -111,7 +111,7 @@ ${cfg.draft ? '<div class="draft-banner" role="note"><strong>Draft for review.</
       </ul>
     </div>
 
-    <div class="stage stage-a">
+    <div class="stage stage-a" id="stage-a">
       <div class="stage-head">
         <span class="stage-tag">Stage A &middot; Included in this proposal</span>
         <h3>December 2026: begin virtually</h3>
@@ -137,7 +137,7 @@ ${cfg.draft ? '<div class="draft-banner" role="note"><strong>Draft for review.</
       <p class="note"><b>Team Map and Collaboration Map.</b> The Working Genius Team Map is included in this stage. It shows how people are wired. The broader Collaboration Map that Catherine has begun, which shows how recurring work actually flows between people, is a separate piece of work described in Stage B and Section 2.</p>
     </div>
 
-    <div class="stage stage-b">
+    <div class="stage stage-b" id="stage-b">
       <div class="stage-head">
         <span class="stage-tag tag-optional">Stage B &middot; Optional next step, not included in the December fee</span>
         <h3>January or February 2027: an in-person working session</h3>
