@@ -213,9 +213,9 @@ ${cfg.draft ? '<div class="draft-banner" role="note"><strong>Draft for review.</
     <div class="path" aria-label="From foundation to daily practice">
       <div class="path-step path-now"><span class="dot"></span><b>December foundation</b><span>Shared language and a Team Map</span></div>
       <div class="path-line" aria-hidden="true"></div>
-      <div class="path-step"><span class="dot"></span><b>Build on it</b><span>Options below, chosen together</span></div>
+      <div class="path-step path-build"><span class="dot"></span><b>Build on it</b><span>Options below, chosen together</span></div>
       <div class="path-line" aria-hidden="true"></div>
-      <div class="path-step"><span class="dot"></span><b>Daily practice</b><span>How the team works, every week</span></div>
+      <div class="path-step path-daily"><span class="dot"></span><b>Daily practice</b><span>How the team works, every week</span></div>
     </div>
     <div class="bgrid">
       <article class="bcard">

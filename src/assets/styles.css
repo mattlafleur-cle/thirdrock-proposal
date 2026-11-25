@@ -248,3 +248,6 @@ mark.tbd { background: #fff1b8; color: #3d3100; border: 1px dashed #b08a00; bord
 }
 .s1 .glance { margin: 8px 0 0; max-width: 44rem; }
 .stage { scroll-margin-top: 90px; }
+/* Distinct markers on the Section 2 path: solid (done), half-filled (building), target (destination) */
+.path-build .dot { border-color: var(--orange); background: linear-gradient(90deg, var(--orange) 50%, var(--paper) 50%); }
+.path-daily .dot { width: 18px; height: 18px; top: -9px; border: 3px solid var(--green); background: radial-gradient(circle, var(--green) 0 3px, var(--paper) 3.5px); }
