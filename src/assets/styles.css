@@ -208,3 +208,5 @@ mark.tbd { background: #fff1b8; color: #3d3100; border: 1px dashed #b08a00; bord
 .about p { color: var(--muted); margin-bottom: 0; }
 .about .actions { margin-top: 1rem; }
 @media (max-width: 560px) { .about-row { grid-template-columns: 1fr; gap: 14px; text-align: center; } .about-row img { margin: 0 auto; width: 96px; height: 96px; } }
+.seq-next { margin: 1.2rem 0 0; font-weight: 600; }
+.close { scroll-margin-top: 90px; }

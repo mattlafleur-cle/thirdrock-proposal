@@ -79,7 +79,6 @@ ${cfg.draft ? '<div class="draft-banner" role="note"><strong>Draft for review.</
       <p>Thank you for the conversation, Scott and Catherine. You described a team that is already leaning toward each other: more conversation across the organization, more shared problem solving, and real energy for doing it well. This proposal is a simple way to start in December, keep that momentum through the new year, and make the gains part of how the team works every day.</p>
       <div class="actions">
         <a class="btn btn-primary" href="#start">See the proposed engagement</a>
-        <a class="btn btn-ghost" href="${mail}">Discuss the proposal</a>
       </div>
       <div class="glance" aria-label="Proposal at a glance">
         <a class="glance-card" href="#start"><span class="glance-k">${v(d.sessionWindow)}</span><b>Virtual foundation</b><span>${v(d.fee)}</span></a>
@@ -195,10 +194,7 @@ ${cfg.draft ? '<div class="draft-banner" role="note"><strong>Draft for review.</
         <li>Hold the December virtual session.</li>
         <li>Decide together whether and how to proceed with an in-person gathering.</li>
       </ol>
-      <div class="actions">
-        <a class="btn btn-primary" href="${mail}">Discuss the proposed engagement</a>
-        ${cfg.contact.bookingUrl ? `<a class="btn btn-ghost" href="${esc(cfg.contact.bookingUrl)}" rel="noopener">${esc(cfg.contact.bookingLabel)}</a>` : ''}
-      </div>
+      <p class="seq-next">Ready to begin, or want to adjust anything? <a href="#contact">Here is how to reach us.</a></p>
     </div>
 
     <div class="team">
@@ -271,15 +267,14 @@ ${cfg.draft ? '<div class="draft-banner" role="note"><strong>Draft for review.</
   </div>
 </section>
 
-<section class="close">
+<section class="close" id="contact">
   <div class="wrap narrow center">
     <h2>Let's discuss the details</h2>
     <p>We would be glad to walk through this proposal, adjust anything that does not fit, and settle the details together.</p>
     <div class="actions center-actions">
-      <a class="btn btn-primary" href="${mail}">Discuss the proposed engagement</a>
-      ${cfg.contact.bookingUrl ? `<a class="btn btn-ghost" href="${esc(cfg.contact.bookingUrl)}" rel="noopener">${esc(cfg.contact.bookingLabel)}</a>` : ''}
+      ${cfg.contact.bookingUrl ? `<a class="btn btn-primary" href="${esc(cfg.contact.bookingUrl)}" rel="noopener">${esc(cfg.contact.bookingLabel)}</a>` : `<a class="btn btn-primary" href="${mail}">Email us</a>`}
     </div>
-    <p class="meta"><a href="${mail}">${esc(cfg.contact.email)}</a></p>
+    <p class="meta">Prefer email? Write to <a href="${mail}">${esc(cfg.contact.email)}</a> and we will find a time that works.</p>
   </div>
 </section>
 </main>
