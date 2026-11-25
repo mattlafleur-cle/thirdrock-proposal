@@ -243,8 +243,8 @@ ${cfg.draft ? '<div class="draft-banner" role="note"><strong>Draft for review.</
       <article class="bcard">
         <div class="bicon"><svg viewBox="0 0 48 48" aria-hidden="true" focusable="false"><path d="M10 38h28"/><path d="M14 38V28M22 38V22M30 38V16"/><path d="m28 12 4-4 4 4M32 8v8"/></svg></div>
         <h3>Continued team development</h3>
-        <p>Coaching, small-group conversations, and periodic check-ins, plus a possible session for your wider medic team.</p>
-        <ul class="chips"><li>Coaching</li><li>Check-ins</li><li>Medic team session</li></ul>
+        <p>Coaching, small-group conversations, and periodic check-ins, plus possible sessions for your wider medic team.</p>
+        <ul class="chips"><li>Coaching</li><li>Check-ins</li><li>Medic team sessions</li></ul>
       </article>
     </div>
     <p class="fine">Each option is scoped and agreed separately; none is part of the December proposal. Ideas drawn from Rocket Fuel (Gino Wickman and Mark C. Winters), the Entrepreneurial Operating System, The Time-Rich Company, and Science of People are referenced with credit to their owners; we do not reproduce their proprietary programs.</p>
