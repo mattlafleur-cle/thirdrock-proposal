@@ -258,7 +258,7 @@ ${cfg.draft ? '<div class="draft-banner" role="note"><strong>Draft for review.</
     <img src="assets/img/working-genius-certified.webp" alt="The 6 Types of Working Genius Certified badge" width="120" height="120" loading="lazy">
     <div>
       <h2 id="about-h">About No Alumni</h2>
-      <p>Certified Working Genius facilitators based in Northeast Ohio, working with teams in healthcare, the trades, real estate, transportation, and education. Read what clients and participants say, and how our work connects with Maple Creek Advisors.</p>
+      <p>Certified Working Genius facilitators based in Northeast Ohio, working with teams in healthcare, the trades, real estate, executive functions, transportation, education, non-profits, and more. Read what clients and participants say, and how our work connects with Maple Creek Advisors.</p>
       <div class="actions">
         <a class="btn btn-ghost" href="https://www.noalumni.com/our-work/" target="_blank" rel="noopener">Our work and client reviews</a>
         <a class="btn btn-ghost" href="https://www.noalumni.com/maple-creek/" target="_blank" rel="noopener">No Alumni and Maple Creek Advisors</a>
