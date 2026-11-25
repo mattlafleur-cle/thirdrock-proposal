@@ -11,7 +11,7 @@ const v = (x) => {
 };
 
 const FACILITATORS = {
-  greg: { name: 'Greg Snyder', role: 'Co-founder and CEO, No Alumni. Certified Working Genius Facilitator.', img: 'greg.webp' },
+  greg: { name: 'Greg Snyder', role: 'No Alumni Co-founder and CEO. Certified Working Genius Facilitator. Culture-Building Guru.', img: 'greg.webp' },
   matt: { name: 'Matt LaFleur', role: 'Co-founder, No Alumni. CPA, fractional CFO, and Working Genius facilitator.', img: 'matt.webp' },
   josh: { name: 'Josh Muller', role: 'Chief Visionary, No Alumni. Business coach who built and sold a company of his own.', img: 'josh.webp' },
 };
