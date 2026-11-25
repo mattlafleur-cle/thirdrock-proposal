@@ -7,7 +7,7 @@
 <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
 <meta name="robots" content="noai, noimageai">
 <meta name="referrer" content="no-referrer">
-<title>Collaboration Hub concept</title>
+<title>ThirdRockMD Team Hub concept</title>
 <style>
   :root { --bg: #0c1013; --panel: #141a1f; --panel-2: #1a2228; --line: #26313a; --text: #eef3f5; --muted: #9fb0ba; --teal: #11829b; --teal-hi: #3fb3cb; --teal-soft: #0f2a33; --warm: #e3a35a; --ok: #4cc38a; --focus: #ffd27a; }
   * { box-sizing: border-box; }
@@ -19,7 +19,8 @@
   .side { background: var(--panel); border-right: 1px solid var(--line); padding: 20px 14px; }
   .side-in { position: sticky; top: 20px; }
   .logo { font-weight: 700; letter-spacing: 0.02em; padding: 4px 10px 20px; }
-  .logo span { display: block; font-size: 12px; color: var(--muted); font-weight: 500; }
+  .logo img { display: block; width: 100%; max-width: 190px; height: auto; margin: 0 0 4px; }
+  .logo span { display: block; font-size: 12px; color: var(--muted); font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; margin-top: 2px; }
   .side nav a { display: flex; gap: 10px; align-items: center; color: var(--muted); text-decoration: none; padding: 9px 10px; border-radius: 8px; font-weight: 500; }
   .side nav a:hover, .side nav a.on { background: var(--teal-soft); color: var(--text); }
   .side nav svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
@@ -84,7 +85,7 @@
     .side { padding: 12px; min-width: 0; } .side-in { position: static; }
     .side nav { display: flex; overflow-x: auto; gap: 4px; }
     .side nav a { white-space: nowrap; }
-    .logo { padding-bottom: 10px; } .side .foot { display: none; }
+    .logo { padding-bottom: 10px; display: flex; align-items: center; gap: 10px; } .logo img { max-width: 140px; } .side .foot { display: none; }
     main { padding: 18px 14px 30px; }
     .search { min-width: 0; width: 100%; }
     .stat { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
@@ -100,7 +101,7 @@
 <div class="concept-bar" role="note">Illustrative concept. Fictional people and data. Not a product and not connected to any system.</div>
 <div class="app">
   <aside class="side"><div class="side-in">
-    <div class="logo">ThirdRockMD Hub<span>Team home base</span></div>
+    <div class="logo"><img src="thirdrockmd-logo.webp?v=2" alt="ThirdRockMD" width="384" height="160"><span>Team Hub</span></div>
     <nav aria-label="Hub sections">
       <a class="on" href="#home"><svg viewBox="0 0 24 24"><path d="M3 11 12 4l9 7v9H3z"/></svg>Home</a>
       <a href="#people"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.8-3.5 3.4-5.5 6.5-5.5s5.7 2 6.5 5.5M16 4.5a3.5 3.5 0 0 1 0 7M18 14.8c2 .7 3.2 2.5 3.6 5.2"/></svg>People</a>
