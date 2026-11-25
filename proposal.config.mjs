@@ -36,7 +36,7 @@ export default {
     sessionLength: 'up to 2 hours',
     sessionWindow: 'December 2026',
     assessmentsOutBy: 'December 7, 2026',
-    leadershipFollowUp: '90-minute',
+    leadershipFollowUp: '60-minute',
     officeHours: 'one-on-one sessions during December 2026',
     officeHoursIncluded: 'included in the December per-participant rate',
     fee: '$525 per participant ($5,250 for 10 participants)',
