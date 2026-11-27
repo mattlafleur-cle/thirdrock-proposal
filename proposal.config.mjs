@@ -39,7 +39,7 @@ export default {
     leadershipFollowUp: '60-minute',
     officeHours: 'one-on-one sessions during December 2026',
     officeHoursIncluded: 'included in the December per-participant rate',
-    fee: '$525 per participant ($5,250 for 10 participants)',
+    fee: '$4,987.50 for 10 participants',
   },
 
   inPerson: {
@@ -58,7 +58,7 @@ export default {
 
   terms: {
     followUpPricing: 'To be determined together, based on need',
-    assessmentFees: 'Included in the per-participant rate for up to 10 participants',
+    assessmentFees: '$525 per participant for 9 participants ($4,725), plus $262.50 (50% of the rate) for one participant who has already completed the assessment',
     paymentSchedule: 'For each component: 50% due when the agreement is signed, and 50% due five days before the session.',
     cancellation: 'Each session may be rescheduled once at no charge with at least 10 business days of notice. Cancellations made 10 or more business days before a session are refunded, less the cost of any assessments already issued. Within 10 business days, the deposit is non-refundable, and for the in-person session any non-refundable travel or venue costs already committed are not refunded.',
   },
