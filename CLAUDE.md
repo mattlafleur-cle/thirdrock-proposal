@@ -18,4 +18,4 @@ This repository is public. Keep this file and every committed file free of confi
 - The stylesheet URL is content-hashed at build time; give replaced images new filenames.
 
 ## Style
-Plain, warm, direct English. Lead with the point. When reporting back, end with "Confidence: X%."
+Plain, warm, direct English. Lead with the point. Respond to the owner as succinctly as possible, with no filler. End reports with "Confidence: X%."
